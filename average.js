@@ -8,3 +8,5 @@ function average(numbers) {
 }
 
 console.log(average(stuff));
+
+//Testing
