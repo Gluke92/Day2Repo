@@ -29,4 +29,4 @@ function min(numbers) {
   return minNum;
 }
 
-
+console.log(min(stuff));
