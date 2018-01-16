@@ -1,5 +1,5 @@
 'use strict';
-const stuff = [1, 3, 5, 7];
+let stuff = [1, 3, 5, 7];
 
 function max(numbers) {
   let i = 0;
@@ -29,4 +29,10 @@ function min(numbers) {
   return minNum;
 }
 
+function average(numbers) {
+  let total = 0;
+  numbers.forEach(number => (total += number));
+  return total / numbers.length;
+}
 
+average(stuff);
