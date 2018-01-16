@@ -85,32 +85,54 @@
 // console.log(filter(myNames));
 
 
-//Problem 3
+// //Problem 3
 
-const rocksWarning = hazardWarningCreator('Rocks on the Road');
-const avalancheWarning = hazardWarningCreator('Watch out for snow!');
-const earthquakeWarning = hazardWarningCreator('The ground is shaking!');
-
-function hazardWarningCreator(typeOfWarning) {
-  let warningCounter = 0;
-  return function(location) {
-    warningCounter++;
-    console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!`);
-    console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} time(s) today!`);
-  };
-}
-
-rocksWarning('Main St and Pacific Ave');
-rocksWarning('Olympic and La Brea');
-rocksWarning('Wilshire and Western');
-
-avalancheWarning('Hollywood and Vine');
-avalancheWarning('Hollywood and Orange');
-
-earthquakeWarning('Cowesett and Cochran');
-earthquakeWarning('Chapin and Armory');
-
-
-// Now let's invoke hazardWarningCreator three times, catching the returned function in separate variables, such as:
 // const rocksWarning = hazardWarningCreator('Rocks on the Road');
-// (you create two more of your choice)
+// const avalancheWarning = hazardWarningCreator('Watch out for snow!');
+// const earthquakeWarning = hazardWarningCreator('The ground is shaking!');
+
+// function hazardWarningCreator(typeOfWarning) {
+//   let warningCounter = 0;
+//   return function(location) {
+//     warningCounter++;
+//     console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!`);
+//     console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} time(s) today!`);
+//   };
+// }
+
+// rocksWarning('Main St and Pacific Ave');
+// rocksWarning('Olympic and La Brea');
+// rocksWarning('Wilshire and Western');
+
+// avalancheWarning('Hollywood and Vine');
+// avalancheWarning('Hollywood and Orange');
+
+// earthquakeWarning('Cowesett and Cochran');
+// earthquakeWarning('Chapin and Armory');
+
+
+// // Now let's invoke hazardWarningCreator three times, catching the returned function in separate variables, such as:
+// // const rocksWarning = hazardWarningCreator('Rocks on the Road');
+// // (you create two more of your choice)
+
+
+//Problem 4
+
+// [turtleStepsFwd, turtleStepslft]
+
+const testArray = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+
+// #1: Use the filter method to remove any items where the turtle moves backwards or to the right
+//remove negatives 
+// (i.e.where either the first of second number is an item is negative).
+
+console.log(testArray.filter(value => value[0] >= 0 && value[1] >= 0));
+
+// #2: Use the map method to create a new array containing how many steps the turtle makes in total with each movement
+//(i.e.the first and second number added together).
+
+console.log(testArray.map(value => (Math.abs(value[0]) + Math.abs(value[1]))));
+
+// #3: Use the forEach method to log out how many steps the turtle took in each case.
+
+console.log(testArray.forEach(value => ))
